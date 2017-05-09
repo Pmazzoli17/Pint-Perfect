@@ -1,1 +1,155 @@
-home.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Perfect Pint!</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <!-- <link href="css/materialize.css" type="text/css" rel="stylesheet"/> -->
+  <link href="css/style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <!-- header -->
+  <section class="navbar-fixed" id="home">
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper">
+        <a href="#" id="logo-container" class="brand-logo">Perfect Pint</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#finder" class="grey-text text-darken-3">Find Beers</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav grey darken-4">
+          <li><a href="#finder" class="white-text">Find Beers</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons black-text">menu</i></a>
+      </div>
+    </nav>
+  </section>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+ <!--      <div class="container valign-wrapper">
+        <div class="box-border">
+        </div>
+      </div> -->
+    </div>
+    <div class="parallax"><img src="img/backbeer.jpg" alt=""></div>
+  </div>
+
+  <main class="container" id="finder">
+    <section class="section">
+
+      <!-- info boxes   -->
+      <div class="row">
+        <h4 class="header center searchText grey-text text-darken-4">Find the perfect beer based on:</h4>
+
+        <div class="col s12 m6 l4">
+          <div class="card large hoverable">
+            <div class="card-image">
+              <img src="./img/campfire.jpeg" alt="campfire">
+            </div>
+            <div class="card-content center-align">
+              <span class="card-title">An Event</span>
+              <p>Select an event and we'll pair it with a great beer.</p>
+              <form>
+                <div class="input-field">
+                  <select class="browser-default" id="eventName">
+                    <option value="event-dropdown" disabled selected>Choose an event</option>
+
+                  </select>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4">
+          <div class="card large hoverable">
+            <div class="card-image">
+              <img src="img/map.jpeg" alt="Picture of map">
+            </div>
+            <div class="card-content center-align">
+              <span class="card-title">Nearby Breweries</span>
+              <p>Find local breweries.</p>
+              <form>
+                <label for="zipCodeBrew"></label>
+                <input class="userNearZip center-align" type="text" placeholder="Enter 5-digit Zip Code" id="zipCodeBrew">
+                  <button class="btn waves-effect green darken-3" id="find-nearby">Beer me ASAP</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <section class="parallax-container valign-wrapper searchResults" id="result">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <!-- <div class="row center"> -->
+          <!-- weather table -->
+          <!-- <div class="col s12">
+            <table class="results center">
+              <tbody class="weatherResult"> -->
+              <!-- weather table shows here -->
+              <!-- </tbody>
+            </table>
+          </div>
+        </div> -->
+
+        <div class="row center">
+          <div class="col s12">
+            <div class="recommend hidden"><h5>Select one of these recommended styles.</h5></div>
+            <div class="row center">
+              <div class="col s12 m12">
+                <div class="buttonDiv">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row center">
+          <div class="col s12">
+            <ul class="collapsible popout beerResult" data-collapsible="accordion">
+            </ul>
+            <div class="localBreweries left-align hidden"></div>
+            <table class="results2 striped">
+              <tbody class="beerResult2">
+              <!-- beer results shows here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="img/beer-mountains.jpg" alt="beer with mounatin view"></div>
+  </section>
+
+  <footer class="page-footer grey lighten-2">
+    <div class="row">
+      <div class="col l8 s12">
+        <h5 class="footer-logo grey-text text-darken-3">Perfect Pint!</h5>
+        <p class="footer-logo grey-text text-darken-3">Lorem ipsum</p>
+      </div>
+      <div class="col l4 s12 left-align">
+        <ul>
+          <li><a class="grey-text text-darken-3" href="#home">Top of Page</a></li>
+          <li><a href="#finder" class="grey-text text-darken-3">Find Beers</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/events.js"></script>
+
+</body>
+</html>
