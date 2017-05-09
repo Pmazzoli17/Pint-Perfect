@@ -1,0 +1,29 @@
+{
+  "name": "b-final-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pmazzoli17/b-final-project.git"
+  },
+  "author": "peter_mazzoli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pmazzoli17/b-final-project/issues"
+  },
+  "homepage": "https://github.com/Pmazzoli17/b-final-project#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "method-override": "^2.3.8",
+    "mysql": "^2.13.0",
+    "path": "^0.12.7",
+    "sequelize": "^3.30.4"
+  }
+}
