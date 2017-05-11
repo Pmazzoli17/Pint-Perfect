@@ -41,7 +41,7 @@ $(document).ready(function() {
                   $('html, body').animate({
                     scrollTop: $('#result').offset().top}, 3000);
 
-                    $('.weatherResult').append('<tr><td class="center-align"><img src="img/icons64/' + cond + '.png"><br>' + weatherData.weather + '</td><td class="temp right-align">' + weatherData.temp_f + '°</td><td class="wind right-align">' + 'wind: ' + weatherData.wind_mph + ' mph' + '</td></tr>');
+                    $('.weatherResult').append('<tr><td class="center-align"><img class="weathimg" src="img/icons64/' + cond + '.png"><br>' + weatherData.weather + '</td><td class="temp right-align">' + weatherData.temp_f + '°</td><td class="wind right-align">' + 'wind: ' + weatherData.wind_mph + ' mph' + '</td></tr>');
 
                     $('.recommend').removeClass('hidden');
 
