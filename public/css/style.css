@@ -2,10 +2,22 @@ p {
   line-height: 2rem;
 }
 
+body {
+  background-color: #E6E6FA; 
+}
 
-/*.card.large .card-image {
-     height: 0px; 
-}*/
+.nav-wrapper {
+  background-color: #E6E6FA; 
+}
+
+.weathimg {
+  margin-bottom: 9px;
+}
+
+.beachimg {
+  margin-bottom: 10px;
+
+}
 
 .row {
     margin-bottom: 0px;
@@ -31,7 +43,7 @@ nav .brand-logo {
 }
 
 .box-border {
-  margin: 35% auto auto auto;
+  margin: 10% auto auto auto;
   border: 1px solid black;
   padding: 1px 15px;
   background-color: rgba(215, 215, 215, 0.7);
