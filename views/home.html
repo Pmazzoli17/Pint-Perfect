@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
   <!-- <link href="css/materialize.css" type="text/css" rel="stylesheet"/> -->
   <link href="css/style.css" type="text/css" rel="stylesheet"/>
+  <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 </head>
 
 <body>
@@ -154,7 +157,14 @@
     <div class="row">
       <div class="col l8 s12">
         <h5 class="footer-logo grey-text text-darken-3">Pint Perfect!</h5>
-        <p class="footer-logo grey-text text-darken-3">Lorem ipsum</p>
+          <!-- This is where React will render the contents it generates -->
+            <div id="reactapp" class="footer-logo grey-text text-darken-3"></div>
+            <script type="text/babel">
+              ReactDOM.render(
+                <p>Copyright 2017</p>,
+                document.querySelector("#reactapp")
+              );
+           </script>
       </div>
       <div class="col l4 s12 left-align">
         <ul>
