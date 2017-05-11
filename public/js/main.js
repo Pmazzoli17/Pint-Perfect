@@ -11,7 +11,95 @@ $(document).ready(function() {
     //popout list-group
     $('.collapsible').collapsible();
 
-      //events part of search //sort objects alphabetically
+  //find users weather using 5 digit number
+  $('#find-weather').on('click', function(e) {
+        e.preventDefault();
+        var userZipCode = parseInt($('.userInputZip').val());
+
+        $('.userInputZip').val('');
+
+        clearResults();
+
+        if (userZipCode > 500 && userZipCode < 99999) {
+
+          $.ajax({
+            url: 'http://api.wunderground.com/api/a1a17a8a0af25722/api/a1a17a8a0af25722/conditions/q/' + userZipCode + '.json',
+            type: 'GET',
+            data: {
+                format: 'json'
+            },
+            error: function() {
+                alert('An error has occurred');
+            },
+            success: function(data) {
+
+                  var weatherData = data.current_observation;
+                  var cond = weatherData.icon;
+                  var temp = weatherData.temp_f;
+                  setButtons(temp);
+
+                  $('html, body').animate({
+                    scrollTop: $('#result').offset().top}, 3000);
+
+                    $('.weatherResult').append('<tr><td class="center-align"><img src="img/icons64/' + cond + '.png"><br>' + weatherData.weather + '</td><td class="temp right-align">' + weatherData.temp_f + '°</td><td class="wind right-align">' + 'wind: ' + weatherData.wind_mph + ' mph' + '</td></tr>');
+
+                    $('.recommend').removeClass('hidden');
+
+            } //end success function
+          }); //end weather ajax
+        } else {
+          Materialize.toast('Zip code was not recognized, please enter a five digit zip code in the U.S.', 5000);
+        }
+  }); //end weather finder
+
+  //set temp buttons
+  var setButtons = function(temp){
+    if(temp<=41){
+      for(var i in tempBeer['lowTemp']){
+
+           var $btn = $('<button>')
+             .addClass('getStyle')
+             .addClass('btn-large waves-effect green darken-3')
+             .val(tempBeer['lowTemp'][i].value)
+             .text(tempBeer['lowTemp'][i].name)
+
+           $btn.click(function(e){
+                findBeer($(this).val());
+           });
+           $('.buttonDiv').append($btn);
+       }
+    }else if(temp<70){
+      for(var i in tempBeer['midTemp']){
+
+           var $btn = $('<button>')
+             .addClass('getStyle')
+             .addClass('btn-large waves-effect green darken-3')
+             .val(tempBeer['midTemp'][i].value)
+             .text(tempBeer['midTemp'][i].name)
+
+           $btn.click(function(e){
+                findBeer($(this).val());
+           });
+           $('.buttonDiv').append($btn);
+       }
+    }else{
+      for(var i in tempBeer['highTemp']){
+
+           var $btn = $('<button>')
+             .addClass('getStyle')
+             .addClass('btn-large waves-effect green darken-3')
+             .val(tempBeer['highTemp'][i].value)
+             .text(tempBeer['highTemp'][i].name)
+
+           $btn.click(function(e){
+                findBeer($(this).val());
+           });
+           $('.buttonDiv').append($btn);
+       }
+    }
+  }; //end temp buttons
+
+  //events part of search //sort objects alphabetically
   var eventNames = Object.keys(events).sort();
 
     //append all events into option form
@@ -50,7 +138,7 @@ $(document).ready(function() {
       } //end loop
   }); // end eventName
 
-    ///////////////find beers function used by event
+  //find beers function used by weather and event
   var findBeer = function(styleId) {
 
       $.ajax({
@@ -67,6 +155,7 @@ $(document).ready(function() {
         success: function(beerData) {
             $('.recommend').addClass('hidden');
             $('.beerResult').html('');
+            $('.weatherResult').html('');
             $('.localBreweries').addClass('hidden');
 
             for (var i = 0; i < 3; i++) {
@@ -126,6 +215,7 @@ $(document).ready(function() {
 
   //clear previous results
   var clearResults = function(){
+    $('.weatherResult').html('');
     $('.beerResult').html('');
     $('.beerResult2').html('');
     $('.buttonDiv').html('');

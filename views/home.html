@@ -15,7 +15,7 @@
   <section class="navbar-fixed" id="home">
     <nav class="white" role="navigation">
       <div class="nav-wrapper">
-        <a href="#" id="logo-container" class="brand-logo">Pint Perfect</a>
+        <a href="#home" id="logo-container" class="brand-logo">Pint Perfect</a>
         <ul class="right hide-on-med-and-down">
           <li><a href="#finder" class="grey-text text-darken-3">Find Beers</a></li>
         </ul>
@@ -44,7 +44,26 @@
       <!-- info boxes   -->
       <div class="row">
         <h4 class="header center searchText grey-text text-darken-4">Find the perfect beer based on:</h4>
+        
+        <!-- Weather -->
+        <div class="col s12 m6 l4" >
+          <div class="card large hoverable">
+            <div class="card-image">
+              <img src="./img/beach-beer.jpg" alt="Beer on the Beach">
+            </div>
+            <div class="card-content center-align">
+              <span class="card-title">The Weather</span>
+              <p>Pair beers with your weather.</p>
+              <form>
+                <label for="zipCodeWeather"></label>
+                <input class="userInputZip center-align" type="text" placeholder="Enter 5-digit Zip Code" id="zipCodeWeather">
+                  <button class="btn waves-effect green darken-3" id="find-weather">Get my weather</button>
+              </form>
+            </div>
+          </div>
+        </div>
 
+        <!-- Event -->
         <div class="col s12 m6 l4">
           <div class="card large hoverable">
             <div class="card-image">
@@ -65,6 +84,7 @@
           </div>
         </div>
 
+        <!-- Nearby Breweries -->
         <div class="col s12 m6 l4">
           <div class="card large hoverable">
             <div class="card-image">
@@ -89,16 +109,16 @@
   <section class="parallax-container valign-wrapper searchResults" id="result">
     <div class="section no-pad-bot">
       <div class="container">
-        <!-- <div class="row center"> -->
+        <div class="row center">
           <!-- weather table -->
-          <!-- <div class="col s12">
+          <div class="col s12">
             <table class="results center">
-              <tbody class="weatherResult"> -->
+              <tbody class="weatherResult">
               <!-- weather table shows here -->
-              <!-- </tbody>
+              </tbody>
             </table>
           </div>
-        </div> -->
+        </div>
 
         <div class="row center">
           <div class="col s12">
