@@ -1,5 +1,5 @@
 {
-  "name": "b-final-project",
+  "name": "Pint-Perfect",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Pmazzoli17/b-final-project.git"
+    "url": "git+https://github.com/Pmazzoli17/Pint-Perfect.git"
   },
   "author": "peter_mazzoli",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Pmazzoli17/b-final-project/issues"
+    "url": "https://github.com/Pmazzoli17/Pint-Perfect/issues"
   },
-  "homepage": "https://github.com/Pmazzoli17/b-final-project#readme",
+  "homepage": "https://github.com/Pmazzoli17/Pint-Perfect#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",

@@ -4,8 +4,26 @@ p {
 
 body {
   background-color: #CD853F;
-  /*background-image: url("/img/woodback.jpg");*/ 
 }
+
+/*event scroll*/
+select {
+  background-color: #2E7D32;
+  color: white;
+  width: 75%;
+  margin: auto;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+/*Card Edits*/
+.card .card-title {
+    font-size: 35px;
+}
+
+/*.card .card-content p {
+    font-size: 18px;
+}*/
 
 .nav-wrapper {
   background-color: #CD853F; 
@@ -136,7 +154,7 @@ p {
 .parallax-container {
   min-height: 380px;
   line-height: 0;
-  height: 560px;
+  /*height: 560px;*/
   color: rgba(255,255,255,.9);
 }
   .parallax-container .section {
