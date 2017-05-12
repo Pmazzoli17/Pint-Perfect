@@ -16,11 +16,28 @@
 <body>
   <!-- header -->
   <section class="navbar-fixed" id="home">
+  <script src="https://cdn.auth0.com/js/lock/10.15/lock.min.js"></script>
+  <script>
+    var lock = new Auth0Lock('ezaCqu7EwydZuCAPkOWCfW3lAVjlfM78', 'tombootcamp.auth0.com', {
+    auth: {
+      redirectUrl: 'http://localhost:3000',
+      responseType: 'code',
+      params: {
+        scope: 'openid email' // Learn about scopes: https://auth0.com/docs/scopes
+      }
+    }
+  });
+</script>
+
+
     <nav class="white" role="navigation">
       <div class="nav-wrapper">
         <a href="#home" id="logo-container" class="brand-logo">Pint Perfect</a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#finder" class="grey-text text-darken-3">Find Beers</a></li>
+          <li><a href="#finder" class="grey-text text-darken-3">Find Beers </a>
+          </li>
+          <li> <button class="waves-effect waves-brown btn-flat grey-text text-darken-3" onclick="lock.show();">Login</button> 
+          </li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav grey darken-4">
@@ -156,7 +173,7 @@
   <footer class="page-footer grey lighten-2">
     <div class="row">
       <div class="col l8 s12">
-        <h5 class="footer-logo grey-text text-darken-3">Pint Perfect!</h5>
+        <p class="footer-logo grey-text text-darken-3">Pint Perfect!</p>
           <!-- This is where React will render the contents it generates -->
             <div id="reactapp" class="footer-logo grey-text text-darken-3"></div>
             <script type="text/babel">
@@ -165,7 +182,7 @@
                 document.querySelector("#reactapp")
               );
            </script>
-      </div>
+        </div>
       <div class="col l4 s12 left-align">
         <ul>
           <li><a class="grey-text text-darken-3" href="#home">Top of Page</a></li>
