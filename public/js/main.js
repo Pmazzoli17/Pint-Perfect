@@ -161,8 +161,6 @@ $(document).ready(function() {
             for (var i = 0; i < 3; i++) {
                   if(beerData.data[i].breweries[0].name !== " " && beerData.data[i].name !== " " && beerData.data[i].description !== " "){
 
-                    // $('.beerResult').append('<li><div class="collapsible-header grey-text text-darken-9">' + beerData.data[i].name + '</div><div class="collapsible-body white grey-text text-darken-8 left-align"><p>' + beerData.data[i].description + '<br><strong class= "brew">Brewery: ' + beerData.data[i].breweries[0].name + '</strong></p></div></li>');
-
                      $('.beerResult').append('<li><div class="collapsible-header grey-text text-darken-9">' + beerData.data[i].name + '</div><div class="collapsible-body white grey-text text-darken-8 left-align"><p>' + '<br><strong class = "brew">Brewery: ' + beerData.data[i].breweries[0].name + '</strong><br>' + beerData.data[i].description + '</p></div></li>');
                   }
             }
