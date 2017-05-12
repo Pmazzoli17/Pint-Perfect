@@ -200,7 +200,7 @@ $(document).ready(function() {
                 $('html, body').animate({
                   scrollTop: $('#result').offset().top}, 3000);
 
-                $('.localBreweries').html('<h6 class="black-text"><strong>Breweries found in zip code <em>'+ userZipNear + '</em>.</h6>');
+                $('.localBreweries').html('<h6 class="black-text"><strong class = "brewla">Breweries found in zip code <em>'+ userZipNear + '</em>.</h6>');
 
                   for (var i = 0; i < 10; i++) {
                       $('.beerResult2').append("<tr><td><a class='bLinks' href='" + results.data[i].brewery.website + "'target='_blank'>" + results.data[i].brewery.name + "</a></td><td>" + results.data[i].streetAddress + "</td><td>" + results.data[i].locality + ", " + results.data[i].region + "</td></tr>");
