@@ -111,6 +111,10 @@ p {
   display: none;
 }
 
+.hidden-text-footer{
+  color: #CD853F !important;
+}
+
 /*recommend buttons*/
 .getStyle {
   margin: 5px 20px 1px 20px;
