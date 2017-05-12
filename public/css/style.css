@@ -3,11 +3,12 @@ p {
 }
 
 body {
-  background-color: #E6E6FA; 
+  background-color: #CD853F;
+  /*background-image: url("/img/woodback.jpg");*/ 
 }
 
 .nav-wrapper {
-  background-color: #E6E6FA; 
+  background-color: #CD853F; 
 }
 
 .weathimg {
@@ -24,13 +25,48 @@ body {
 }
 
 nav .brand-logo {
-    color: black;
+    /*color: white;*/
+    font-family: 'Annie Use Your Telescope';font-size: 47px;
     }
 
 .grey-text.text-darken-3 {
-    color: #424242 !important;
-    font-size: 20px;
+    /*color: #424242 !important;*/
+    color: white !important;
+    font-family: 'Annie Use Your Telescope';font-size: 47px;
 }
+
+.grey-text.text-darken-5 {
+    /*color: #424242 !important;*/
+    color: white !important;
+    font-family: 'Annie Use Your Telescope';font-size: 47px;
+}
+
+/*text of beers*/
+.grey-text.text-darken-9 {
+    /*color: #424242 !important;*/
+    color: black !important;
+    font-family: 'Assistant';font-size: 35px;
+}
+
+/*margin of beers paragraph*/
+p {
+    margin-top: -20px;
+}
+
+/*text of beers paragraph*/
+.grey-text.text-darken-8 {
+    /*color: #424242 !important;*/
+    color: black !important;
+    font-family: Arial, Helvetica, sans-serif; font-size: 20px;
+    /*font-family: 'Assistant';font-size: 35px;*/
+}
+
+/*brewery name*/
+.brew {
+  color: black !important;
+  font-family: Arial, Helvetica, sans-serif; font-size: 35px;
+}
+
 
 /*nav brand*/
 .brand-logo, .footer-logo {
@@ -40,6 +76,11 @@ nav .brand-logo {
 /*ul in nav*/
 .right{
  margin-right: 40px;
+}
+
+/*FOOTER Background*/
+.grey.lighten-2 {
+    background-color: #CD853F !important;
 }
 
 .box-border {
