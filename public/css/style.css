@@ -1,3 +1,42 @@
+.container-fluid {
+  background-color: #CD853F;
+  color: white;
+}
+
+.navbar {
+    border-width: 0 1px 1px 0px;
+}
+
+/*Passport Stuff*/
+form.signup, form.login {
+  margin-top: 50px;
+}
+
+/*Signup Page*/
+h2 {
+  font-family: 'Annie Use Your Telescope';font-size: 47px;
+  color: white !important;
+}
+
+label {
+  font-family: 'Annie Use Your Telescope';font-size: 27px;
+  color: white !important;
+}
+
+.signup {
+  font-family: 'Annie Use Your Telescope';font-size: 27px;
+  color: white !important;
+  margin-top: -5px;
+}
+
+.login {
+  font-family: 'Annie Use Your Telescope';font-size: 27px;
+  color: white !important;
+  margin-top: -5px;
+}
+
+/*-----------------------------------------------------------------*/
+
 p {
   line-height: 2rem;
 }
@@ -43,7 +82,7 @@ select {
 }
 
 nav .brand-logo {
-    /*color: white;*/
+    color: white;
     font-family: 'Annie Use Your Telescope';font-size: 47px;
     }
 
