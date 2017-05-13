@@ -4,12 +4,16 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <title>Pint Perfect!</title>
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href='//fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
   <link href='//fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
   <link href="css/style.css" type="text/css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
   <!-- React -->
   <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
   <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
@@ -17,9 +21,9 @@
 </head>
 
 <body>
-  <!-- header -->
+  <!-- Header -->
   <section class="navbar-fixed" id="home">
-  <script src="https://cdn.auth0.com/js/lock/10.15/lock.min.js"></script>
+  <!-- <script src="https://cdn.auth0.com/js/lock/10.15/lock.min.js"></script>
   <script>
     var lock = new Auth0Lock('ezaCqu7EwydZuCAPkOWCfW3lAVjlfM78', 'tombootcamp.auth0.com', {
     auth: {
@@ -30,7 +34,7 @@
       }
     }
   });
-</script>
+</script> -->
 
     <nav class="white" role="navigation">
       <div class="nav-wrapper">
@@ -38,8 +42,13 @@
         <ul class="right hide-on-med-and-down">
           <li><a href="#finder" class="grey-text text-darken-3">Find Beers </a>
           </li>
-          <li> <button class="waves-effect waves-brown btn-flat grey-text text-darken-3" onclick="lock.show();">Login</button> 
+          <li>
+            <a class="navbar-brand grey-text text-darken-3" href="/logout">
+            Logout
+            </a>
           </li>
+          <!-- <li> <button class="waves-effect waves-brown btn-flat grey-text text-darken-3" onclick="lock.show();">Login</button> 
+          </li> -->
         </ul>
 
         <ul id="nav-mobile" class="side-nav grey darken-4">
@@ -56,9 +65,15 @@
 <!--         <div class="box-border">
           <h3 class="header center headline grey-text text-darken-4">Help in the never ending search for the perfect beer!</h3>
         </div> -->
+        <div class="box-border">
+          <h2 class="header center headline grey-text text-darken-4 animated zoomIn">Welcome <span class="member-name"></span></h2>
+        </div>
       </div>
     </div>
-    <div class="parallax"><img src="img/backbeer.jpg" alt=""></div>
+
+    <div class="parallax">
+      <img src="img/backbeer.jpg" alt="">
+    </div>
   </div>
 
   <main class="container" id="finder">
@@ -201,6 +216,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/events.js"></script>
+  <script type="text/javascript" src="js/members.js"></script>
 
 </body>
 </html>
