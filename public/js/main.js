@@ -23,7 +23,7 @@ $(document).ready(function() {
         if (userZipCode > 500 && userZipCode < 99999) {
 
           $.ajax({
-            url: 'http://g-wunderground.herokuapp.com/api/a1a17a8a0af25722/api/a1a17a8a0af25722/conditions/q/' + userZipCode + '.json',
+            url: 'https://g-wunderground.herokuapp.com/api/a1a17a8a0af25722/api/a1a17a8a0af25722/conditions/q/' + userZipCode + '.json',
             type: 'GET',
             data: {
                 format: 'json'
