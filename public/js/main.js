@@ -23,7 +23,7 @@ $(document).ready(function() {
         if (userZipCode > 500 && userZipCode < 99999) {
 
           $.ajax({
-            url: 'http://api.wunderground.com/api/a1a17a8a0af25722/api/a1a17a8a0af25722/conditions/q/' + userZipCode + '.json',
+            url: 'http://g-wunderground.herokuapp.com/api/a1a17a8a0af25722/api/a1a17a8a0af25722/conditions/q/' + userZipCode + '.json',
             type: 'GET',
             data: {
                 format: 'json'
@@ -142,7 +142,7 @@ $(document).ready(function() {
   var findBeer = function(styleId) {
 
       $.ajax({
-        url: 'https://api.brewerydb.com/v2/beers/?key= c55a5013e5a80a7820219511604675a9&availableId=1&styleId=' + styleId + '&withBreweries=Y',
+        url: 'https://g-brewerydb.herokuapp.com/v2/beers/?key= c55a5013e5a80a7820219511604675a9&availableId=1&styleId=' + styleId + '&withBreweries=Y',
 
         type: 'GET',
         crossDomain : true,
@@ -181,7 +181,7 @@ $(document).ready(function() {
       if (userZipNear > 500 && userZipNear < 99999) {
 
         $.ajax({
-           url: 'https://api.brewerydb.com/v2/locations/?key=c55a5013e5a80a7820219511604675a9&postalCode=' + userZipNear,
+           url: 'https://g-brewerydb.herokuapp.com/v2/locations/?key=c55a5013e5a80a7820219511604675a9&postalCode=' + userZipNear,
 
           type: 'GET',
           crossDomain : true,
