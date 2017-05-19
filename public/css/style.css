@@ -58,6 +58,13 @@ label {
 }
 
 .signup {
+  /*font-family: 'Annie Use Your Telescope';font-size: 27px;*/
+  font-size: 27px;
+  color: black !important;
+  margin-top: -5px;
+}
+
+.signbottom {
   font-family: 'Annie Use Your Telescope';font-size: 27px;
   font-size: 27px;
   color: black !important;
@@ -77,7 +84,8 @@ p {
 }
 
 body {
-  background-color: #CD853F;
+  /*background-color: #CD853F;*/
+  background-image: url("/img/wood-banner.png");
 }
 
 /*event scroll*/
@@ -100,7 +108,8 @@ select {
 }*/
 
 .nav-wrapper {
-  background-color: #CD853F; 
+  /*background-color: #CD853F; */
+  background-image: url("/img/wood-banner.png");
 }
 
 .weathimg {
@@ -177,7 +186,8 @@ p {
 
 /*FOOTER Background*/
 .grey.lighten-2 {
-    background-color: #CD853F !important;
+    /*background-color: #CD853F !important;*/
+    background-image: url("/img/wood-banner.png");
 }
 
 .box-border {
