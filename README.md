@@ -1,1 +1,1 @@
-# b-final-project
+Perfect Pint is a web application that helps users to find the perfect beer based on local weather, a type of event, or location.
