@@ -38,12 +38,12 @@ form.signup, form.login {
 }
 
 /*Signup Page*/
-a {
+a.signlog {
   color: white;
   font-size: 40px;
 }
 
-a:hover {
+a.signlog:hover {
   color: #8e3501;
 }
 
