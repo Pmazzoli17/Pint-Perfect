@@ -129,7 +129,42 @@ select {
 }
 
 .row {
-    margin-bottom: 0px;
+/*    margin-bottom: 0px;*/
+    margin-left: 0px !important; 
+    margin-right: 0px !important; 
+}
+
+/*Media Query Sizing Signup/Login*/
+@media only screen and (max-width: 992px) {
+    .jumbotron {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+}
+
+@media only screen and (max-width: 505px) {
+    .jumbotron {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+/*Materialize Media Query Sizing*/
+@media only screen and (max-width: 993px) {
+    .footer-logo {
+     margin-left: 0px !important; 
+    }
+/*    .row .col.s12 {
+     width: 50%; 
+    }*/
+
+    nav .brand-logo {
+    left: 20%
+  }
+}
+
+.card.large .card-image+.card-content {
+     max-height: 50%; 
 }
 
 nav .brand-logo {
