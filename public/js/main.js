@@ -23,7 +23,10 @@ $(document).ready(function() {
         if (userZipCode > 500 && userZipCode < 99999) {
 
           $.ajax({
-            url: 'https://g-wunderground.herokuapp.com/api/a1a17a8a0af25722/api/a1a17a8a0af25722/conditions/q/' + userZipCode + '.json',
+            url: 'http://api.wunderground.com/api/a1a17a8a0af25722/api/a1a17a8a0af25722/conditions/q/' + userZipCode + '.json',
+
+            // url: 'https://g-wunderground.herokuapp.com/api/a1a17a8a0af25722/api/a1a17a8a0af25722/conditions/q/' + userZipCode + '.json',
+
             type: 'GET',
             data: {
                 format: 'json'
@@ -141,8 +144,11 @@ $(document).ready(function() {
   //find beers function used by weather and event
   var findBeer = function(styleId) {
 
-      $.ajax({
-        url: 'https://g-brewerydb.herokuapp.com/v2/beers/?key= c55a5013e5a80a7820219511604675a9&availableId=1&styleId=' + styleId + '&withBreweries=Y',
+      // $.ajax({
+      //   url: 'https://g-brewerydb.herokuapp.com/v2/beers/?key= c55a5013e5a80a7820219511604675a9&availableId=1&styleId=' + styleId + '&withBreweries=Y',
+
+        $.ajax({
+        url: 'http://api.brewerydb.com/v2/beers/?key= c55a5013e5a80a7820219511604675a9&availableId=1&styleId=' + styleId + '&withBreweries=Y',
 
         type: 'GET',
         crossDomain : true,
@@ -180,8 +186,11 @@ $(document).ready(function() {
 
       if (userZipNear > 500 && userZipNear < 99999) {
 
+        // $.ajax({
+        //    url: 'https://g-brewerydb.herokuapp.com/v2/locations/?key=c55a5013e5a80a7820219511604675a9&postalCode=' + userZipNear,
+
         $.ajax({
-           url: 'https://g-brewerydb.herokuapp.com/v2/locations/?key=c55a5013e5a80a7820219511604675a9&postalCode=' + userZipNear,
+           url: 'http://api.brewerydb.com/v2/locations/?key=c55a5013e5a80a7820219511604675a9&postalCode=' + userZipNear,
 
           type: 'GET',
           crossDomain : true,
